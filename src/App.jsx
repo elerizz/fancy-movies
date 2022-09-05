@@ -9,7 +9,7 @@ import Navbar from './components/NavBar/NavBar';
 import MainModal from './components/MainModal/MainModal';
 
 function App() {
-  const [inputValue, setInputValue] = useState("");
+  const [filterValue, setFilterValue] = useState("");
   const [movieID, setMovieID] = useState("324668")
   const [movieData, setMovieData] = useState({});
   const [isModalVisibile, setModalVisibility] = useState(false);
@@ -65,12 +65,28 @@ function App() {
     <div className="App" >
       {showScrollTopButton && <IoMdArrowDropupCircle onClick={handleArrowUpClick} className="arrow-icon"/>}
       <Navbar filmSection={filmSection} setModalVisibility={setModalVisibility}/>
-      {isModalVisibile && <MainModal setModalVisibility={setModalVisibility} movieData={movieData}/>}
-      {/* <MainInput inputValue={inputValue} movieData={movieData} filmSection={filmSection} onHandleSubmit={onHandleSubmit} setInputValue={setInputValue}/> */}
+      {isModalVisibile && <MainModal setModalVisibility={setModalVisibility} movieData={movieData}/>} 
       <MainSection setMovieID={setMovieID} filmSection={filmSection} setModalVisibility={setModalVisibility}/>
+      <MainInput setMovieID={setMovieID}/>
       <MovieEntity movieData={movieData} myRef={filmSection}/>
     </div>
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* <MainFilter inputFilter={inputFilter} movieData={movieData} filmSection={filmSection} onHandleSubmit={onHandleSubmit} setFilterValue={setFilterValue}/> */}
