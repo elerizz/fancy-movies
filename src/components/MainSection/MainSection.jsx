@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { GET } from '../../utils/api'
 import MainCard from '../MainCard';
 import CardList from '../CardList/CardList';
-import './index.css';
+import './index.scss';
 
 export default function MainSection({ setMovieID, filmSection, setModalVisibility }){
     const [movieLists, setMovieLists] = useState({
@@ -34,7 +34,7 @@ export default function MainSection({ setMovieID, filmSection, setModalVisibilit
             <div className="MainSection_background" />
             <MainCard data={movieLists.popular[0]} setMovieID={setMovieID} filmSection={filmSection} className="MainCard_popular" />
             <div className="MainSection_content">
-            <h2>Top Rated:</h2>
+            <h2 className='MainSection_title'>Top Rated:</h2>
               <CardList data={filteredTopRated} filmSection={filmSection} setMovieID={setMovieID} setModalVisibility={setModalVisibility} className="topRated"/>
               <h2>Upcoming:</h2>
               <CardList data={movieLists.upcoming} filmSection={filmSection} setMovieID={setMovieID} setModalVisibility={setModalVisibility} className="upcoming"/>

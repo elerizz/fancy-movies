@@ -1,5 +1,5 @@
 import MainCard from '../MainCard'
-import './index.css'
+import './index.scss'
 
 export default function CardList ({data, className, setMovieID, filmSection, setModalVisibility}) {
     

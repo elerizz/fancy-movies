@@ -1,4 +1,4 @@
-import './index.css';
+import './index.scss';
 
 export default function MainCard({ className, data, setMovieID, filmSection, style={},titleStyle={}, setModalVisibility=()=>{} }){  
     const { title, poster_path, vote_average, id} = data;
